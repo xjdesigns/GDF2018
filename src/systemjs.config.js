@@ -31,8 +31,6 @@
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-      'chartist': 'node_modules/chartist/dist/chartist.js',
-      'NG2': 'app/NG2',
       'lodash': 'npm:lodash/lodash.js',
       'components': 'app/components'
     },
@@ -48,10 +46,6 @@
         }
       },
       rxjs: {
-        defaultExtension: 'js'
-      },
-      'NG2': {
-        main: 'index.js',
         defaultExtension: 'js'
       },
       'components': {

@@ -3,61 +3,18 @@
   <header class="app-header">
 
     <div class="app-header__logo">
-      LUNA
+      Web Components
     </div>
     <div class="app-header__links">
-      <span [routerLink]="['/welcome']">v1:ALPHA</span>
+      <span [routerLink]="['/welcome']">GDF</span>
     </div>
 
   </header>
 
-  <div class="spx-click-shield" [class.is-open]="appMenuOpen" (click)="toggleMenu()"></div>
-  <div class="app-sidebar" [class.is-open]="appMenuOpen">
-    <div (click)="toggleMenu()" class="app-sidebar__open" [class.is-open]="appMenuOpen">
-      <i class="material-icons">add</i>
-    </div>
-    <nav class="app-sidebar__nav">
-      <ul class="app-nav">
-        <li class="app-nav__nav">Navigation</li>
-        <li [routerLink]="['/welcome']" [routerLinkActive]="['is-active']">Home</li>
-        <li [routerLink]="['/variable']" [routerLinkActive]="['is-active']">Vars / Base</li>
-        <li [routerLink]="['/grid']" [routerLinkActive]="['is-active']">Grid</li>
-        <li
-          *ngFor="let nav of routes"
-          (click)="toggleNav(nav.name)"
-          class="has-menu"
-          [class.is-active]="activeNav === nav.name"
-        >
-          {{nav.name}}
-          <div
-            class="app-nav-inner"
-            *ngIf="nav.routes && nav.routes.length > 0"
-          >
-            <ul>
-              <li
-                *ngFor="let sub of nav.routes"
-                [routerLink]="sub.path"
-                [routerLinkActive]="['is-active']"
-              >
-                {{sub.name}}
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li [routerLink]="['/helpers']" [routerLinkActive]="['is-active']">Helpers</li>
-        <li [routerLink]="['/ng2']" [routerLinkActive]="['is-active']">NG2</li>
-      </ul>
-    </nav>
-  </div>
-
   <router-outlet></router-outlet>
 
   <footer class="app-footer">
-    <p>LUNA 2017</p>
-    <p>Created by Nick Dobie, Emi Lyman, and Jason Jacobson</p>
+    <p>GDF 2018 - Web Components</p>
   </footer>
 
 </div>
-
-<!-- alert tag for service -->
-<alert></alert>

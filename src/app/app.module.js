@@ -11,20 +11,11 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
 var app_routing_module_1 = require("./app-routing.module");
-var chartist_component_1 = require("./chartist/chartist.component");
 // COMPONENTS
 var app_component_1 = require("./app.component");
 var welcome_component_1 = require("./components/welcome/welcome.component");
 // DIRECTIVES
 var code_display_directive_1 = require("./shared/code-display.directive");
-// PROVIDER BARRELS
-// import {
-//   SixPixelsProvider
-// } from './components'
-// import { Ng2Component, Ng2Provider } from './NG2';
-// ALERTS
-var alert_1 = require("./services/alert/alert");
-var alert_service_1 = require("./services/alert-service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -36,20 +27,14 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
             http_1.HttpModule,
-            app_routing_module_1.AppRoutingModule,
-            chartist_component_1.ChartistModule
+            app_routing_module_1.AppRoutingModule
         ],
         declarations: [
             app_component_1.AppComponent,
             welcome_component_1.WelcomeComponent,
-            code_display_directive_1.CodeDisplayDirective,
-            alert_1.AlertComponent
-            // ...SixPixelsProvider
-            // ...Ng2Provider
+            code_display_directive_1.CodeDisplayDirective
         ],
-        providers: [
-            alert_service_1.AlertService
-        ],
+        providers: [],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

@@ -1,5 +1,5 @@
 {
-  "name": "luna",
+  "name": "gdf-2018-jj",
   "version": "1.1.0",
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
@@ -42,16 +42,13 @@
     "@angular/upgrade": "~4.0.0",
     "@types/lodash": "^4.14.65",
     "angular-in-memory-web-api": "~0.3.1",
-    "chartist": "^0.11.0",
     "core-js": "^2.4.1",
     "lodash": "^4.17.4",
-    "ng-chartist": "^1.1.1",
     "rxjs": "5.0.1",
     "systemjs": "0.19.39",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "6-comp-test": "^1.0.0",
     "@types/angular": "^1.5.16",
     "@types/angular-animate": "^1.5.5",
     "@types/angular-cookies": "^1.4.2",
