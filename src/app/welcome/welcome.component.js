@@ -18,7 +18,7 @@ var WelcomeComponent = (function () {
 WelcomeComponent = __decorate([
     core_1.Component({
         selector: 'app-welcome',
-        templateUrl: 'app/components/welcome/welcome.component.html'
+        templateUrl: 'app/welcome/welcome.component.html'
     }),
     __metadata("design:paramtypes", [])
 ], WelcomeComponent);

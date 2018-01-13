@@ -1,12 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // // COMPONENTS
-// import { ComponentsComponent } from './components/components.component';
-//
-// const ComponentsProvider = [
-//   ComponentsComponent
-// ];
-// export { ComponentsComponent } from './components/components.component';
-//
+var card_component_1 = require("./components/card/card.component");
+var ComponentsProvider = [
+    card_component_1.CardComponent
+];
 // // EXPORT PROVIDERS AS ONE
-// export const SixPixelsProvider = [
-//   ...ComponentsProvider
-// ];
+exports.GDFComponentProvider = ComponentsProvider.slice();

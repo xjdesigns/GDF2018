@@ -7,23 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var welcome_component_1 = require("./welcome/welcome.component");
-// import { ComponentsRouting } from './components/components/components.routes';
-var routes = [
-    { path: '', redirectTo: '/welcome', pathMatch: 'full' },
-    { path: 'welcome', component: welcome_component_1.WelcomeComponent }
-    // ...ComponentsRouting
-];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
+var CardComponent = (function () {
+    function CardComponent() {
     }
-    return AppRoutingModule;
+    return CardComponent;
 }());
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
-        exports: [router_1.RouterModule]
+CardComponent = __decorate([
+    core_1.Component({
+        selector: 'app-card',
+        templateUrl: 'app/components/components/card/card.component.html'
     })
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
+], CardComponent);
+exports.CardComponent = CardComponent;

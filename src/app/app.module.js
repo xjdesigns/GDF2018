@@ -13,7 +13,8 @@ var forms_1 = require("@angular/forms");
 var app_routing_module_1 = require("./app-routing.module");
 // COMPONENTS
 var app_component_1 = require("./app.component");
-var welcome_component_1 = require("./components/welcome/welcome.component");
+var welcome_component_1 = require("./welcome/welcome.component");
+var components_1 = require("./components");
 // DIRECTIVES
 var code_display_directive_1 = require("./shared/code-display.directive");
 var AppModule = (function () {
@@ -33,7 +34,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             welcome_component_1.WelcomeComponent,
             code_display_directive_1.CodeDisplayDirective
-        ],
+        ].concat(components_1.GDFComponentProvider),
         providers: [],
         bootstrap: [app_component_1.AppComponent]
     })

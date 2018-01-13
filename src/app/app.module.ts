@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { GDFComponentProvider } from './components'
 
 // DIRECTIVES
 import { CodeDisplayDirective } from './shared/code-display.directive';
@@ -24,7 +25,8 @@ import { CodeDisplayDirective } from './shared/code-display.directive';
   declarations: [
     AppComponent,
     WelcomeComponent,
-    CodeDisplayDirective
+    CodeDisplayDirective,
+    ...GDFComponentProvider
   ],
   providers: [],
   bootstrap: [ AppComponent ]

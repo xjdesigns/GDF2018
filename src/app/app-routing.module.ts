@@ -4,7 +4,7 @@ import {
   Routes
 } from '@angular/router';
 
-import { WelcomeComponent } from './components/welcome/welcome.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 // import { ComponentsRouting } from './components/components/components.routes';
 
 const routes: Routes = [
