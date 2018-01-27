@@ -16,7 +16,6 @@ export class CardComponent implements OnInit {
   @Input() dataDesc: string = 'Steps walkthrough'
   @Input() cardImg: string = '';
   @Input() cardText: string = 'I am text';
-  @Input() isPrimaryAction;
   @Output() onPrimaryAction = new EventEmitter<any>();
 
   constructor() {}

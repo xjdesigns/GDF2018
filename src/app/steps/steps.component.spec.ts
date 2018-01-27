@@ -1,23 +1,23 @@
-import { AppComponent } from './steps.component';
+import { StepsComponent } from './steps.component';
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-describe('AppComponent', function () {
+describe('StepsComponent', function () {
   let de: DebugElement;
-  let comp: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+  let comp: StepsComponent;
+  let fixture: ComponentFixture<StepsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent ]
+      declarations: [ StepsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(StepsComponent);
     comp = fixture.componentInstance;
     de = fixture.debugElement.query(By.css('h1'));
   });

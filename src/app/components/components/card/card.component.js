@@ -42,10 +42,6 @@ __decorate([
     __metadata("design:type", String)
 ], CardComponent.prototype, "cardText", void 0);
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], CardComponent.prototype, "isPrimaryAction", void 0);
-__decorate([
     core_1.Output(),
     __metadata("design:type", Object)
 ], CardComponent.prototype, "onPrimaryAction", void 0);

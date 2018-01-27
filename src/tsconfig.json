@@ -22,8 +22,5 @@
   "exclude": [
     "node_modules/*",
     "**/*-aot.ts"
-  ],
-  "include": [
-    "**/*.spec.ts"
   ]
 }

@@ -8,9 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
-// import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 import { StepsComponent } from './steps/steps.component';
-// import { GDFComponentProvider } from './components'
+import { GDFComponentProvider } from './components'
 
 // DIRECTIVES
 import { CodeDisplayDirective } from './shared/code-display.directive';
@@ -24,16 +24,16 @@ import { CodeDisplayDirective } from './shared/code-display.directive';
     AppRoutingModule
   ],
   declarations: [
-    AppComponent
-    // WelcomeComponent,
-    // StepsComponent,
-    // CodeDisplayDirective
-    // ...GDFComponentProvider
+    AppComponent,
+    WelcomeComponent,
+    StepsComponent,
+    CodeDisplayDirective,
+    ...GDFComponentProvider
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
-  // schemas: [
-  //   CUSTOM_ELEMENTS_SCHEMA
-  // ]
+  bootstrap: [ AppComponent ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

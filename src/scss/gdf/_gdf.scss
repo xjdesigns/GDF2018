@@ -1,0 +1,61 @@
+// GDF APP CODE
+$gdf-main-color: #d07828;
+.gdf-main-base {
+  padding: 12px 48px;
+
+  & > p {
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  & > ul {
+    color: white;
+
+    ul {
+      li {
+        margin: 0 0 24px 24px;
+      }
+    }
+  }
+}
+
+.gdf-main-title {
+  color: $gdf-main-color;
+  font-weight: 100;
+}
+
+.gdf-csnippet {
+  margin: 24px auto;
+  border-radius: 24px;
+  overflow: hidden;
+
+  &__title {
+    padding: 6px 12px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 24px 24px 0 0;
+
+    & > span {
+      font-size: .7rem;
+    }
+  }
+}
+
+.gdf-steps-title {
+  width: 300px;
+  background: $gdf-main-color;
+}
+
+popup-info {
+  display: block;
+  width: 30px;
+  height: 20px;
+  background: red;
+}
+jason-button {
+  display: block;
+  width: 200px;
+  height: 24px;
+  background: blue;
+}
