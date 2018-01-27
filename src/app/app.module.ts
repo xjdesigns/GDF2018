@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from  '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -8,8 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { GDFComponentProvider } from './components'
+// import { WelcomeComponent } from './welcome/welcome.component';
+import { StepsComponent } from './steps/steps.component';
+// import { GDFComponentProvider } from './components'
 
 // DIRECTIVES
 import { CodeDisplayDirective } from './shared/code-display.directive';
@@ -23,12 +24,16 @@ import { CodeDisplayDirective } from './shared/code-display.directive';
     AppRoutingModule
   ],
   declarations: [
-    AppComponent,
-    WelcomeComponent,
-    CodeDisplayDirective,
-    ...GDFComponentProvider
+    AppComponent
+    // WelcomeComponent,
+    // StepsComponent,
+    // CodeDisplayDirective
+    // ...GDFComponentProvider
   ],
   providers: [],
   bootstrap: [ AppComponent ]
+  // schemas: [
+  //   CUSTOM_ELEMENTS_SCHEMA
+  // ]
 })
 export class AppModule { }

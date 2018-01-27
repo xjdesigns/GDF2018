@@ -14,6 +14,7 @@ var app_routing_module_1 = require("./app-routing.module");
 // COMPONENTS
 var app_component_1 = require("./app.component");
 var welcome_component_1 = require("./welcome/welcome.component");
+var steps_component_1 = require("./steps/steps.component");
 var components_1 = require("./components");
 // DIRECTIVES
 var code_display_directive_1 = require("./shared/code-display.directive");
@@ -33,10 +34,14 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             welcome_component_1.WelcomeComponent,
+            steps_component_1.StepsComponent,
             code_display_directive_1.CodeDisplayDirective
         ].concat(components_1.GDFComponentProvider),
         providers: [],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent],
+        schemas: [
+            core_1.CUSTOM_ELEMENTS_SCHEMA
+        ]
     })
 ], AppModule);
 exports.AppModule = AppModule;

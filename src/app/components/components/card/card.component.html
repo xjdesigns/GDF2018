@@ -1,18 +1,25 @@
 
 <div class="spx-card">
-  <div class="spx-card__img" data-title="Steps" data-desc="Walk through steps">
+  <div
+    class="spx-card__img"
+    [attr.data-title]="dataTitle"
+    [attr.data-desc]="dataDesc"
+  >
     <!-- // make this optional -->
     <!-- // if no image bg color used -->
-    <img src="https://images.unsplash.com/photo-1464658824763-547203e5a4a1?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=" alt="">
+    <img
+      [attr.src]="cardImg"
+      alt="Card Image"
+    >
   </div>
   <div class="spx-card__content">
     <div class="spx-c-info">
       <p>
-        Text goes here
+        {{cardText}}
       </p>
     </div>
     <div class="spx-c-action">
-      <button class="spx-btn spx-btn--pr spx-btn--sm">Click me</button>
+      <button class="spx-btn spx-btn--pr spx-btn--sm" (click)="primaryActionClick()">Click me</button>
       <button class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm" data-icon="check"></button>
     </div>
   </div>

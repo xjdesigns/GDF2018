@@ -1,0 +1,39 @@
+<div class="gdf-steps-title">
+  <h1>Steps</h1>
+</div>
+
+<div class="gdf-main-base">
+  <p>Note that this project uses Angular 4 specifically. For other major versions you will want to refer to the Angular docs.</p>
+  <p>Here will be the steps of creating and implementing components with Angular 4.</p>
+
+  <div>
+    <app-card
+      dataTitle="Jason Rocks"
+      dataDesc="Here we go..."
+      cardImg="https://www.myrockymountainpark.com/.image/t_share/MTQ3OTg3NjE2NDg5NDE1ODM1/rocky-mountain-peaks.jpg"
+      cardText="This is dynamic and working, our string should be able to be as long as we see fit without any contraints. You could offload this to you parent. Looping you would just assign this to a variable."
+      (onPrimaryAction)="handlePrimaryAction($event)"
+    ></app-card>
+  </div>
+
+  <div class="gdf-csnippet">
+    <div class="gdf-csnippet__title">
+      <span>app-card.component.html</span>
+    </div>
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-card
+    dataTitle="Jason Rocks"
+    dataDesc="Here we go..."
+    cardImg="https://www.myrockymountainpark.com/.image/t_share/MTQ3OTg3NjE2NDg5NDE1ODM1/rocky-mountain-peaks.jpg"
+    cardText="This is dynamic and working"
+    (onPrimaryAction)="yourParentMethod($event)"
+  >&lt;/app-card>
+</code>
+  </pre>
+  </div>
+</div>
+
+<div class="gdf-steps-title">
+  <h1>Steps</h1>
+</div>

@@ -14,12 +14,16 @@
       "../node_modules/@types/"
     ],
     "types": [
-      "lodash"
+      "lodash",
+      "jasmine"
     ]
   },
   "compileOnSave": true,
   "exclude": [
     "node_modules/*",
     "**/*-aot.ts"
+  ],
+  "include": [
+    "**/*.spec.ts"
   ]
 }
