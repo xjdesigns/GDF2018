@@ -14,6 +14,9 @@ var WelcomeComponent = (function () {
     function WelcomeComponent() {
         this.control = 'Hello World from comp';
     }
+    WelcomeComponent.prototype.innerAction = function (e) {
+        console.warn('innerAction::::', e);
+    };
     return WelcomeComponent;
 }());
 WelcomeComponent = __decorate([

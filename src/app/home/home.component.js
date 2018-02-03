@@ -10,28 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var AppComponent = (function () {
-    function AppComponent(router) {
-        var _this = this;
-        this.router = router;
-        this.sideNavIsOpen = false;
-        this.router.events.subscribe(function (e) {
-            if (e instanceof router_1.NavigationStart) {
-                _this.sideNavIsOpen = false;
-            }
-        });
+var HomeComponent = (function () {
+    function HomeComponent() {
+        this.control = 'Hello World from comp';
     }
-    AppComponent.prototype.toggleSidenav = function () {
-        this.sideNavIsOpen = !this.sideNavIsOpen;
+    HomeComponent.prototype.innerAction = function (e) {
+        console.warn('innerAction::::', e);
     };
-    return AppComponent;
+    return HomeComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html'
+HomeComponent = __decorate([
+    core_1.NgModule({
+        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
     }),
-    __metadata("design:paramtypes", [router_1.Router])
-], AppComponent);
-exports.AppComponent = AppComponent;
+    core_1.Component({
+        selector: 'app-home',
+        templateUrl: 'app/home/home.component.html'
+    }),
+    __metadata("design:paramtypes", [])
+], HomeComponent);
+exports.HomeComponent = HomeComponent;

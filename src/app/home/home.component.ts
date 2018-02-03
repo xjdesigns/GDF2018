@@ -5,11 +5,11 @@ import { Component, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: 'app/welcome/welcome.component.html'
+  selector: 'app-home',
+  templateUrl: 'app/home/home.component.html'
 })
 
-export class WelcomeComponent {
+export class HomeComponent {
   control: string = 'Hello World from comp'
   constructor() {}
 

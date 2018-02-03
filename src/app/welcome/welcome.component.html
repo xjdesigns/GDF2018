@@ -1,7 +1,7 @@
-<jason-button name="rocking" [attr.jason]="control"></jason-button>
+<!-- <jason-button name="rocking" [attr.jason]="control"></jason-button> -->
 
-<div class="gdf-main-base">
-  <h1 class="gdf-main-title">TODO:::</h1>
+<!-- <div class="gdf-main-base">
+  <h1 class="gdf-main-title">We are recreating gmail inbox app, 2 pages to show how we can scale this across and app.</h1>
   <ul>
     <li>Finalize talk and elements to create</li>
     <li>
@@ -20,7 +20,7 @@
     <li>Create Component for the slide show presentation</li>
     <li>Create Jason SVG for waving hand and any other cool things to make him do</li>
   </ul>
-</div>
+</div> -->
 
 <!-- <div class="gdf-main-base">
   <h1 class="gdf-main-title">Welcome to Google Devfest 2018</h1>
@@ -40,21 +40,79 @@
   </p>
 </div> -->
 
-<div class="app-main-links">
-  <div class="app-main-links__el">
-    <app-card
-      dataTitle="Karma Rx"
-      dataDesc="Super hot pussy"
-      cardImg="https://i.pinimg.com/originals/a6/ce/d3/a6ced3367fcbff5b1c04faca61cf98eb.jpg"
-    ></app-card>
-  </div>
-  <div class="app-main-links__el">
-    <app-card
-      dataTitle="Karma Rx"
-      dataDesc="Super hot pussy"
-      cardImg="https://images-cdn.9gag.com/photo/aW80nZn_700b.jpg"
-    ></app-card>
-  </div>
+<div class="gdf-main-base">
+  <app-info-title infoTitle="Inbox"></app-info-title>
+  <app-info-bar
+    infoImg="https://planetargon-blog.s3.amazonaws.com/images/flexbox.png"
+    infoTitle="CSS Tricks"
+    infoDesc="Cool CSS tricks to use"
+    (onActionTaken)="innerAction($event)"
+  >
+    <gdf-info-ext>
+      <div class="app-main-links">
+        <div class="app-main-links__el">
+          <app-card
+            dataTitle="Flexbox"
+            dataDesc="CSS Tricks Guide"
+            cardImg="https://planetargon-blog.s3.amazonaws.com/images/flexbox.png"
+            cardText="Learn how to use Flexbox with this stellar guide."
+          ></app-card>
+        </div>
+        <div class="app-main-links__el">
+          <app-card
+            dataTitle="CSS Grid"
+            dataDesc="Guide to CSS Grid"
+            cardImg="https://i.ytimg.com/vi/v5KzBPUEgGQ/maxresdefault.jpg"
+            cardText="CSS Grid adds a new layout module and with climbing browser support lets get our learn on."
+          ></app-card>
+        </div>
+        <div class="app-main-links__el">
+          <app-card
+            dataTitle="SVG"
+            dataDesc="SVGs are AWESOME"
+            cardImg="http://learnhtmlwithsong.com/blog/wp-content/uploads/2015/08/svg-code-in-sublime.gif"
+            cardText="Scalable vector graphics are taking the web by storm, lets figure out how to add into out app."
+          ></app-card>
+        </div>
+      </div>
+    </gdf-info-ext>
+  </app-info-bar>
+  <app-info-bar
+    infoImg="https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png"
+    infoTitle="Code Snippets"
+    infoDesc="Code snippets are AWESOME"
+    (onActionTaken)="innerAction($event)"
+  >
+    <gdf-info-ext>
+      <div class="gdf-main-base">
+        <div class="gdf-csnippet">
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-info-bar
+    infoImg="path/to/image"
+    infoTitle="title"
+    infoDesc="description"
+  >
+    <gdf-info-ext>
+      (transclude)
+    </gdf-info-ext>
+  &lt;/app-info-bar>
+</code>
+  </pre>
+        </div>
+      </div>
+    </gdf-info-ext>
+  </app-info-bar>
+  <app-info-bar
+    infoImg="https://devfest.mn/a/2016/images/devfestmn.caf3a594.svg"
+    infoTitle="Basic Info"
+    infoDesc="This also handles basic information"
+    (onActionTaken)="innerAction($event)"
+  >
+    <gdf-info-ext>
+      <p>I am basic text and could also be anything.</p>
+    </gdf-info-ext>
+  </app-info-bar>
 </div>
 
 <div class="gdf-main-base">
@@ -64,8 +122,16 @@
     </div>
   <pre class="prettyprint">
 <code code-display>
-  <div class="spx-card">
-  </div>
+  &lt;app-info-bar
+    infoImg="path/to/image"
+    infoTitle="title"
+    infoDesc="description"
+    (onActionTaken)="callback($event)"
+  >
+    <gdf-info-ext>
+      (transclude)
+    </gdf-info-ext>
+  &lt;/app-info-bar>
 </code>
   </pre>
   </div>

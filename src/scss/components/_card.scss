@@ -1,0 +1,19 @@
+.spx-card {
+  &__img {
+    height: 180px;
+
+    &::before,
+    &::after {
+      text-shadow: 1px 1px 0px rgba(0,0,0,1);
+    }
+
+    img {
+      object-fit: cover;
+      height: 180px;
+    }
+  }
+
+  .spx-c-info {
+    min-height: 100px;
+  }
+}

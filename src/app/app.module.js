@@ -13,6 +13,7 @@ var forms_1 = require("@angular/forms");
 var app_routing_module_1 = require("./app-routing.module");
 // COMPONENTS
 var app_component_1 = require("./app.component");
+var home_component_1 = require("./home/home.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var steps_component_1 = require("./steps/steps.component");
 var components_1 = require("./components");
@@ -33,6 +34,7 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent,
+            home_component_1.HomeComponent,
             welcome_component_1.WelcomeComponent,
             steps_component_1.StepsComponent,
             code_display_directive_1.CodeDisplayDirective

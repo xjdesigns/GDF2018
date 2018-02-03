@@ -8,11 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var home_component_1 = require("./home/home.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var steps_component_1 = require("./steps/steps.component");
 // import { ComponentsRouting } from './components/components/components.routes';
 var routes = [
-    { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: home_component_1.HomeComponent },
     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
     { path: 'steps', component: steps_component_1.StepsComponent }
     // ...ComponentsRouting

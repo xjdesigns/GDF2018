@@ -2,6 +2,14 @@
 
   <header class="app-header">
 
+    <div class="app-header__menu">
+      <button
+        class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
+        data-icon="menu"
+        (click)="toggleSidenav()"
+      ></button>
+    </div>
+
     <div class="app-header__logo">
       Web Components
     </div>
@@ -17,7 +25,11 @@
   </main>
 
   <footer class="app-footer">
-    <p>GDF 2018 - Web Components</p>
+    <p>GDF 2018 - Web Components - Jason Jacobson</p>
   </footer>
 
 </div>
+
+<app-side-nav
+  [class.is-open]="sideNavIsOpen"
+></app-side-nav>

@@ -1,0 +1,44 @@
+<div
+  class="gdf-info-bar"
+  [class.is-open]="toggleIsActive"
+>
+  <div
+    class="gdf-info-bar__main"
+    (click)="toggleExt()"
+  >
+    <div
+      class="gdf-info-img"
+      *ngIf="infoImg"
+    >
+      <img [attr.src]="infoImg" alt="My image 01">
+    </div>
+    <div class="gdf-info-title">
+      {{infoTitle}}
+    </div>
+  </div>
+  <div
+    class="gdf-info-bar__secondary"
+    (click)="toggleExt()"
+  >
+    <p>{{infoDesc}}</p>
+  </div>
+  <div class="gdf-info-bar__actions">
+    <div class="gdf-info-actions">
+      <button
+        *ngFor="let action of infoActions"
+        class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+        [attr.data-icon]="action.icon"
+        (click)="actionClick(action.item)"
+      ></button>
+      <button
+        class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+        data-icon="more_vert"
+        (click)="menuOptions()"
+      ></button>
+    </div>
+  </div>
+
+  <div class="gdf-info-bar__ext" [class.is-open]="toggleIsActive">
+    <ng-content select="gdf-info-ext"></ng-content>
+  </div>
+</div>

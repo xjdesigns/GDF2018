@@ -10,28 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var AppComponent = (function () {
-    function AppComponent(router) {
-        var _this = this;
-        this.router = router;
-        this.sideNavIsOpen = false;
-        this.router.events.subscribe(function (e) {
-            if (e instanceof router_1.NavigationStart) {
-                _this.sideNavIsOpen = false;
-            }
-        });
+var InfoTitleComponent = (function () {
+    function InfoTitleComponent() {
+        this.onFilterAction = new core_1.EventEmitter();
     }
-    AppComponent.prototype.toggleSidenav = function () {
-        this.sideNavIsOpen = !this.sideNavIsOpen;
+    InfoTitleComponent.prototype.filterAction = function (filter) {
+        this.onFilterAction.emit({ filter: filter });
     };
-    return AppComponent;
+    return InfoTitleComponent;
 }());
-AppComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], InfoTitleComponent.prototype, "infoTitle", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], InfoTitleComponent.prototype, "onFilterAction", void 0);
+InfoTitleComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html'
+        selector: 'app-info-title',
+        // template: `<h1>HEllo World</h1>`
+        templateUrl: 'app/components/components/info-title/info-title.component.html'
     }),
-    __metadata("design:paramtypes", [router_1.Router])
-], AppComponent);
-exports.AppComponent = AppComponent;
+    __metadata("design:paramtypes", [])
+], InfoTitleComponent);
+exports.InfoTitleComponent = InfoTitleComponent;

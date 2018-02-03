@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { StepsComponent } from './steps/steps.component';
 import { GDFComponentProvider } from './components'
@@ -25,6 +26,7 @@ import { CodeDisplayDirective } from './shared/code-display.directive';
   ],
   declarations: [
     AppComponent,
+    HomeComponent,
     WelcomeComponent,
     StepsComponent,
     CodeDisplayDirective,
