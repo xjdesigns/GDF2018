@@ -1,51 +1,11 @@
 <!-- <jason-button name="rocking" [attr.jason]="control"></jason-button> -->
-
-<!-- <div class="gdf-main-base">
-  <h1 class="gdf-main-title">We are recreating gmail inbox app, 2 pages to show how we can scale this across and app.</h1>
-  <ul>
-    <li>Finalize talk and elements to create</li>
-    <li>
-      Create one of the elements as pure web component to showcase this
-
-      <ul>
-        <li>Components to make:::</li>
-        <li>Card</li>
-        <li>Gmail bar</li>
-        <li>Slideshow</li>
-        <li>devfest logo</li>
-        <li>svg jason</li>
-      </ul>
-    </li>
-    <li>Show testing of Angular Component</li>
-    <li>Create Component for the slide show presentation</li>
-    <li>Create Jason SVG for waving hand and any other cool things to make him do</li>
-  </ul>
-</div> -->
-
-<!-- <div class="gdf-main-base">
-  <h1 class="gdf-main-title">Welcome to Google Devfest 2018</h1>
-  <p>My name is Jason Jacobson and I am a front end developer/engineer.</p>
-  <p>I have a strong passion for UI and CSS and creating awesome experiences.</p>
-  <p>This is my presentation on Web Components, and why I think they are awesome.</p>
-  <p>
-    I am going to talk and walk through creating these inside of Angular 2+, but any of the ideas
-    can be applied to your favorite framework when web components are supported.
-  </p>
-  <p>
-    With frameworks creating components has never been easier, so lets walk through creating 3 components
-    and using them in 2 pages.
-  </p>
-  <p>
-    If you are following along click the Steps card below or else you can click on the other cards to see the final pages.
-  </p>
-</div> -->
-
 <!-- <info-bar toggle-open="true"></info-bar> -->
 <div class="gdf-main-base">
   <app-info-title
     infoTitle="Inbox"
     (onFilterAction)="filterActionTaken($event)"
-    ></app-info-title>
+  ></app-info-title>
+
   <app-info-bar
     infoImg="https://planetargon-blog.s3.amazonaws.com/images/flexbox.png"
     infoTitle="CSS Tricks"
@@ -81,6 +41,7 @@
       </div>
     </gdf-info-ext>
   </app-info-bar>
+
   <app-info-bar
     infoImg="https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png"
     infoTitle="Code Snippets"
@@ -107,6 +68,7 @@
       </div>
     </gdf-info-ext>
   </app-info-bar>
+
   <app-info-bar
     infoImg="https://devfest.mn/a/2016/images/devfestmn.caf3a594.svg"
     infoTitle="Basic Info"

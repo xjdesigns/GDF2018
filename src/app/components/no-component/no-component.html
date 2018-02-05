@@ -1,0 +1,262 @@
+<div class="gdf-main-base">
+  <div class="app-info-title">
+    <div class="flex flex--xs-middle">
+      <div class="flex__i--xs-10">
+        <div class="info-title">
+          <h4>{{infoTitle}}</h4>
+        </div>
+      </div>
+      <div class="flex__i--xs-2">
+        <div class="info-action">
+          <app-menu
+            menuIcon="filter_list"
+            [menuList]="filterList"
+            (menuOptionClicked)="filterAction($event)"
+          ></app-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="gdf-info-bar"
+    [class.is-open]="toggleIsActive"
+  >
+    <div
+      class="gdf-info-bar__main"
+      (click)="toggleExt()"
+    >
+      <div
+        class="gdf-info-img"
+        *ngIf="infoImg"
+      >
+        <img [attr.src]="infoImg" alt="My image 01">
+      </div>
+      <div class="gdf-info-title">
+        {{infoTitle}}
+      </div>
+    </div>
+    <div
+      class="gdf-info-bar__secondary"
+      (click)="toggleExt()"
+    >
+      <p>{{infoDesc}}</p>
+    </div>
+    <div class="gdf-info-bar__actions">
+      <div class="gdf-info-actions">
+        <button
+          *ngFor="let action of infoActions"
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <app-menu
+          menuIcon="more_vert"
+          [menuList]="optionsMenuList"
+          (menuOptionClicked)="optionClicked($event)"
+        ></app-menu>
+      </div>
+    </div>
+
+    <div class="gdf-info-bar__ext" [class.is-open]="toggleIsActive">
+      <div class="app-main-links">
+        <div class="app-main-links__el">
+          <div class="spx-card">
+            <div
+              class="spx-card__img"
+              [attr.data-title]="dataTitle"
+              [attr.data-desc]="dataDesc"
+            >
+              <img
+                [attr.src]="cardImg"
+                alt="Card Image"
+              >
+            </div>
+            <div class="spx-card__content">
+              <div class="spx-c-info">
+                <p>
+                  {{cardText}}
+                </p>
+              </div>
+              <div class="spx-c-action">
+                <button
+                  class="spx-btn spx-btn--pr spx-btn--sm"
+                  (click)="primaryActionClick()"
+                >Click me</button>
+                <button
+                  class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+                  data-icon="check"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="app-main-links__el">
+            <div class="spx-card">
+              <div
+                class="spx-card__img"
+                [attr.data-title]="dataTitle"
+                [attr.data-desc]="dataDesc"
+              >
+                <img
+                  [attr.src]="cardImg"
+                  alt="Card Image"
+                >
+              </div>
+              <div class="spx-card__content">
+                <div class="spx-c-info">
+                  <p>
+                    {{cardText}}
+                  </p>
+                </div>
+                <div class="spx-c-action">
+                  <button
+                    class="spx-btn spx-btn--pr spx-btn--sm"
+                    (click)="primaryActionClick()"
+                  >Click me</button>
+                  <button
+                    class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+                    data-icon="check"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="app-main-links__el">
+              <div class="spx-card">
+                <div
+                  class="spx-card__img"
+                  [attr.data-title]="dataTitle"
+                  [attr.data-desc]="dataDesc"
+                >
+                  <img
+                    [attr.src]="cardImg"
+                    alt="Card Image"
+                  >
+                </div>
+                <div class="spx-card__content">
+                  <div class="spx-c-info">
+                    <p>
+                      {{cardText}}
+                    </p>
+                  </div>
+                  <div class="spx-c-action">
+                    <button
+                      class="spx-btn spx-btn--pr spx-btn--sm"
+                      (click)="primaryActionClick()"
+                    >Click me</button>
+                    <button
+                      class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+                      data-icon="check"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="gdf-info-bar"
+    [class.is-open]="toggleIsActive"
+  >
+    <div
+      class="gdf-info-bar__main"
+      (click)="toggleExt()"
+    >
+      <div
+        class="gdf-info-img"
+        *ngIf="infoImg"
+      >
+        <img [attr.src]="infoImg" alt="My image 01">
+      </div>
+      <div class="gdf-info-title">
+        {{infoTitle}}
+      </div>
+    </div>
+    <div
+      class="gdf-info-bar__secondary"
+      (click)="toggleExt()"
+    >
+      <p>{{infoDesc}}</p>
+    </div>
+    <div class="gdf-info-bar__actions">
+      <div class="gdf-info-actions">
+        <button
+          *ngFor="let action of infoActions"
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <app-menu
+          menuIcon="more_vert"
+          [menuList]="optionsMenuList"
+          (menuOptionClicked)="optionClicked($event)"
+        ></app-menu>
+      </div>
+    </div>
+
+    <div class="gdf-info-bar__ext" [class.is-open]="toggleIsActive">
+      <div class="gdf-main-base">
+        <div class="gdf-csnippet">
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-info-bar
+    infoImg="path/to/image"
+    infoTitle="title"
+    infoDesc="description"
+  >
+    <gdf-info-ext>
+      (transclude)
+    </gdf-info-ext>
+  &lt;/app-info-bar>
+</code>
+  </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="gdf-info-bar"
+    [class.is-open]="toggleIsActive"
+  >
+    <div
+      class="gdf-info-bar__main"
+      (click)="toggleExt()"
+    >
+      <div
+        class="gdf-info-img"
+        *ngIf="infoImg"
+      >
+        <img [attr.src]="infoImg" alt="My image 01">
+      </div>
+      <div class="gdf-info-title">
+        {{infoTitle}}
+      </div>
+    </div>
+    <div
+      class="gdf-info-bar__secondary"
+      (click)="toggleExt()"
+    >
+      <p>{{infoDesc}}</p>
+    </div>
+    <div class="gdf-info-bar__actions">
+      <div class="gdf-info-actions">
+        <button
+          *ngFor="let action of infoActions"
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <app-menu
+          menuIcon="more_vert"
+          [menuList]="optionsMenuList"
+          (menuOptionClicked)="optionClicked($event)"
+        ></app-menu>
+      </div>
+    </div>
+
+    <div class="gdf-info-bar__ext" [class.is-open]="toggleIsActive">
+      <p>I am basic text and could also be anything.</p>
+    </div>
+  </div>

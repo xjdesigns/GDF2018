@@ -8,7 +8,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 const ComponentsProvider = [
   CardComponent,
   InfoBarComponent,
-  MenuComponent
+  MenuComponent,
   InfoTitleComponent,
   SideNavComponent
 ];
