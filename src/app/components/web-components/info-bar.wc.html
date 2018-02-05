@@ -1,3 +1,4 @@
+<!-- // NOTE I keep this file as I like to write with Emmett -->
 <div
   class="gdf-info-bar"
   [class.is-open]="toggleIsActive"
@@ -30,11 +31,11 @@
         [attr.data-icon]="action.icon"
         (click)="actionClick(action.item)"
       ></button>
-      <app-menu
-        menuIcon="more_vert"
-        [menuList]="optionsMenuList"
-        (menuOptionClicked)="optionClicked($event)"
-      ></app-menu>
+      <button
+        class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+        data-icon="more_vert"
+        (click)="menuOptions()"
+      ></button>
     </div>
   </div>
 

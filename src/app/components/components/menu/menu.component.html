@@ -1,0 +1,19 @@
+<div
+  class="spx-flyout spx-flyout--right"
+  [class.is-open]="menuIsOpen">
+  <button
+    class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+    [attr.data-icon]="menuIcon"
+    (click)="toggleMenu()"
+  ></button>
+  <div class="spx-flyout__menu">
+    <ul>
+      <li
+      [attr.aria-label]="l"
+      (click)="menuOptionClick(l)"
+      *ngFor="let l of menuList"
+      >{{l.name}}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -17,6 +17,9 @@ var WelcomeComponent = (function () {
     WelcomeComponent.prototype.innerAction = function (e) {
         console.warn('innerAction::::', e);
     };
+    WelcomeComponent.prototype.filterActionTaken = function (opt) {
+        console.warn('Filter Action from inner component', opt);
+    };
     return WelcomeComponent;
 }());
 WelcomeComponent = __decorate([

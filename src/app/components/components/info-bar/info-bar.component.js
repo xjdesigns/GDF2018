@@ -17,6 +17,13 @@ var InfoBarComponent = (function () {
         this.infoDesc = 'Prodive a description';
         this.infoActions = [];
         this.onActionTaken = new core_1.EventEmitter();
+        this.optionsMenuList = [{
+                name: 'Item 01'
+            }, {
+                name: 'Item 02'
+            }, {
+                name: 'Item 03'
+            }];
         this.infoActions = [{
                 icon: 'timeline',
                 item: 'timeline'
@@ -30,15 +37,16 @@ var InfoBarComponent = (function () {
                 icon: 'check',
                 item: 'select'
             }];
+        console.warn('options', this.optionsMenuList);
     }
     InfoBarComponent.prototype.toggleExt = function () {
         this.toggleIsActive = !this.toggleIsActive;
     };
-    InfoBarComponent.prototype.menuOptions = function () {
-        console.warn('this would open the context menu');
-    };
     InfoBarComponent.prototype.actionClick = function (idx, item) {
         this.onActionTaken.emit({ idx: idx, item: item });
+    };
+    InfoBarComponent.prototype.optionClicked = function (opt) {
+        console.warn('my menu option clicked', opt);
     };
     return InfoBarComponent;
 }());

@@ -7,11 +7,11 @@
     </div>
     <div class="flex__i--xs-2">
       <div class="info-action">
-        <button
-          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
-          data-icon="filter_list"
-          (click)="filterAction('filtering')"
-        ></button>
+        <app-menu
+          menuIcon="filter_list"
+          [menuList]="filterList"
+          (menuOptionClicked)="filterAction($event)"
+        ></app-menu>
       </div>
     </div>
   </div>

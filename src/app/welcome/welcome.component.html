@@ -40,8 +40,12 @@
   </p>
 </div> -->
 
+<!-- <info-bar toggle-open="true"></info-bar> -->
 <div class="gdf-main-base">
-  <app-info-title infoTitle="Inbox"></app-info-title>
+  <app-info-title
+    infoTitle="Inbox"
+    (onFilterAction)="filterActionTaken($event)"
+    ></app-info-title>
   <app-info-bar
     infoImg="https://planetargon-blog.s3.amazonaws.com/images/flexbox.png"
     infoTitle="CSS Tricks"

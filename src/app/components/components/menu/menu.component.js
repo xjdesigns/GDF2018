@@ -10,40 +10,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var InfoTitleComponent = (function () {
-    function InfoTitleComponent() {
-        this.onFilterAction = new core_1.EventEmitter();
-        this.filterList = [{
-                name: 'Asc',
-                opt: 'Ascending'
-            }, {
-                name: 'Dsc',
-                opt: 'Descending'
-            }, {
-                name: 'Sort By',
-                opt: 'Sort By'
-            }];
+var MenuComponent = (function () {
+    function MenuComponent() {
+        this.menuIsOpen = false;
+        this.menuList = [];
+        this.menuOptionClicked = new core_1.EventEmitter();
     }
-    InfoTitleComponent.prototype.filterAction = function (filter) {
-        console.warn('Filter Emit', filter);
-        this.onFilterAction.emit({ filter: filter });
+    MenuComponent.prototype.toggleMenu = function () {
+        this.menuIsOpen = !this.menuIsOpen;
     };
-    return InfoTitleComponent;
+    MenuComponent.prototype.menuOptionClick = function (item) {
+        this.menuOptionClicked.emit({ item: item });
+    };
+    return MenuComponent;
 }());
 __decorate([
     core_1.Input(),
     __metadata("design:type", String)
-], InfoTitleComponent.prototype, "infoTitle", void 0);
+], MenuComponent.prototype, "menuIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MenuComponent.prototype, "menuList", void 0);
 __decorate([
     core_1.Output(),
     __metadata("design:type", Object)
-], InfoTitleComponent.prototype, "onFilterAction", void 0);
-InfoTitleComponent = __decorate([
+], MenuComponent.prototype, "menuOptionClicked", void 0);
+MenuComponent = __decorate([
     core_1.Component({
-        selector: 'app-info-title',
-        // template: `<h1>HEllo World</h1>`
-        templateUrl: 'app/components/components/info-title/info-title.component.html'
+        selector: 'app-menu',
+        templateUrl: 'app/components/components/menu/menu.component.html'
     }),
     __metadata("design:paramtypes", [])
-], InfoTitleComponent);
-exports.InfoTitleComponent = InfoTitleComponent;
+], MenuComponent);
+exports.MenuComponent = MenuComponent;

@@ -18,6 +18,14 @@ export class InfoBarComponent {
   @Input() infoActions = [];
   @Output() onActionTaken = new EventEmitter<any>();
 
+  optionsMenuList = [{
+    name: 'Item 01'
+  }, {
+    name: 'Item 02'
+  }, {
+    name: 'Item 03'
+  }]
+
   constructor() {
     this.infoActions = [{
       icon: 'timeline',
@@ -32,17 +40,18 @@ export class InfoBarComponent {
       icon: 'check',
       item: 'select'
     }]
+    console.warn('options', this.optionsMenuList);
   }
 
   toggleExt() {
     this.toggleIsActive = !this.toggleIsActive;
   }
 
-  menuOptions() {
-    console.warn('this would open the context menu');
-  }
-
   actionClick(idx, item) {
     this.onActionTaken.emit({idx, item});
+  }
+
+  optionClicked(opt) {
+    console.warn('my menu option clicked', opt);
   }
 }

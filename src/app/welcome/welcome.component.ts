@@ -16,4 +16,8 @@ export class WelcomeComponent {
   innerAction(e) {
     console.warn('innerAction::::', e);
   }
+
+  filterActionTaken(opt) {
+    console.warn('Filter Action from inner component', opt);
+  }
 }

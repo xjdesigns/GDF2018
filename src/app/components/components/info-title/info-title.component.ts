@@ -15,9 +15,21 @@ export class InfoTitleComponent {
   @Input() infoTitle: string;
   @Output() onFilterAction = new EventEmitter<any>();
 
+  filterList = [{
+    name: 'Asc',
+    opt: 'Ascending'
+  }, {
+    name: 'Dsc',
+    opt: 'Descending'
+  }, {
+    name: 'Sort By',
+    opt: 'Sort By'
+  }]
+
   constructor() {}
 
   filterAction(filter) {
+    console.warn('Filter Emit', filter);
     this.onFilterAction.emit({filter});
   }
 }
