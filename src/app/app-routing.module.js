@@ -10,14 +10,16 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var home_component_1 = require("./home/home.component");
 var welcome_component_1 = require("./welcome/welcome.component");
+var welcome_02_component_1 = require("./welcome-02/welcome-02.component");
+var docs_component_1 = require("./docs/docs.component");
 var steps_component_1 = require("./steps/steps.component");
-// import { ComponentsRouting } from './components/components/components.routes';
 var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+    { path: 'welcome02', component: welcome_02_component_1.Welcome02Component },
+    { path: 'docs', component: docs_component_1.DocsComponent },
     { path: 'steps', component: steps_component_1.StepsComponent }
-    // ...ComponentsRouting
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

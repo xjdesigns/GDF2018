@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { Welcome02Component } from './welcome-02/welcome-02.component';
+import { DocsComponent } from './docs/docs.component';
 import { StepsComponent } from './steps/steps.component';
 import { GDFComponentProvider } from './components'
 
@@ -28,6 +30,8 @@ import { CodeDisplayDirective } from './shared/code-display.directive';
     AppComponent,
     HomeComponent,
     WelcomeComponent,
+    Welcome02Component,
+    DocsComponent,
     StepsComponent,
     CodeDisplayDirective,
     ...GDFComponentProvider

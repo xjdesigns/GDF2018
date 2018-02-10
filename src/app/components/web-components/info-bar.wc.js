@@ -28,24 +28,20 @@ class InfoBar extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['toggle-open'];
+    return ['toggle'];
+  }
+
+  get toggle() {
+    return this._isToggleActive;
+  }
+
+  set toggle(val) {
+    this.setAttribute('is-toggle-open', val);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.warn('name', name);
-    console.warn('oldValue', oldValue);
-    console.warn('newValue', newValue);
+    this._isToggleActive = newValue;
   }
-
-  // these are for attributes
-  // get isToggleActive() {
-  //   return this._isToggleActive;
-  // }
-  //
-  // set isToggleActive(state) {
-  //   console.warn('state', state);
-  //   this.setAttribute('class', state);
-  // }
 
   setupEvents() {
     let btn = this.querySelector('button');
@@ -59,3 +55,8 @@ class InfoBar extends HTMLElement {
 }
 
 customElements.define('info-bar', InfoBar);
+
+
+customElements.whenDefined('info-bar').then(() => {
+  console.log('info-bar defined');
+});

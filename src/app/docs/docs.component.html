@@ -1,0 +1,76 @@
+<div class="gdf-main-base">
+  <div class="gdf-csnippet">
+    <div class="gdf-csnippet__title">
+      <span>info-title.component.html</span>
+    </div>
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-info-title
+    infoTitle="Inbox"
+    (onFilterAction)="filterActionTaken($event)"
+  >&lt;/app-info-title>
+</code>
+  </pre>
+  </div>
+</div>
+
+<div class="gdf-main-base">
+  <div class="gdf-csnippet">
+    <div class="gdf-csnippet__title">
+      <span>card.component.html</span>
+    </div>
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-info-bar
+    infoImg="path/to/image"
+    infoTitle="title"
+    infoDesc="description"
+    (onActionTaken)="callback($event)"
+  >
+    <gdf-info-ext>
+      (transclude)
+    </gdf-info-ext>
+  &lt;/app-info-bar>
+</code>
+  </pre>
+  </div>
+</div>
+
+<div class="gdf-main-base">
+  <div class="gdf-csnippet">
+    <div class="gdf-csnippet__title">
+      <span>info-bar.component.html</span>
+    </div>
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-info-bar
+    infoImg="https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png"
+    infoTitle="Code Snippets"
+    infoDesc="Code snippets are AWESOME"
+    (onActionTaken)="innerAction($event)"
+  >
+    &lt;gdf-info-ext>
+      (transclude)
+    &lt;/gdf-info-ext>
+  &lt;/app-info-bar>
+</code>
+  </pre>
+  </div>
+</div>
+
+<div class="gdf-main-base">
+  <div class="gdf-csnippet">
+    <div class="gdf-csnippet__title">
+      <span>menu.component.html</span>
+    </div>
+  <pre class="prettyprint">
+<code code-display>
+  &lt;app-menu
+    menuIcon="more_vert"
+    [menuList]="optionsMenuList"
+    (menuOptionClicked)="optionClicked($event)"
+  >&lt;/app-menu>
+</code>
+  </pre>
+  </div>
+</div>

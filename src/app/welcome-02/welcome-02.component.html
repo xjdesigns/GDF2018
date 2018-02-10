@@ -1,0 +1,83 @@
+<div class="gdf-main-base">
+  <app-info-title
+    infoTitle="My Second Page"
+    (onFilterAction)="filterActionTaken($event)"
+  ></app-info-title>
+
+  <div class="flex">
+    <div class="flex__i--xs-9">
+      <app-info-bar
+        infoImg="https://planetargon-blog.s3.amazonaws.com/images/flexbox.png"
+        infoTitle="CSS Tricks"
+        infoDesc="Cool CSS tricks to use"
+        (onActionTaken)="innerAction($event)"
+      >
+        <gdf-info-ext>
+          <div class="app-main-links">
+            <div class="app-main-links__el">
+              <app-card
+                dataTitle="Flexbox"
+                dataDesc="CSS Tricks Guide"
+                cardImg="https://planetargon-blog.s3.amazonaws.com/images/flexbox.png"
+                cardText="Learn how to use Flexbox with this stellar guide."
+              ></app-card>
+            </div>
+            <div class="app-main-links__el">
+              <app-card
+                dataTitle="SVG"
+                dataDesc="SVGs are AWESOME"
+                cardImg="http://learnhtmlwithsong.com/blog/wp-content/uploads/2015/08/svg-code-in-sublime.gif"
+                cardText="Scalable vector graphics are taking the web by storm, lets figure out how to add into out app."
+              ></app-card>
+            </div>
+          </div>
+        </gdf-info-ext>
+      </app-info-bar>
+      <app-info-bar
+        infoImg="https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png"
+        infoTitle="Code Snippets"
+        infoDesc="Code snippets are AWESOME"
+        (onActionTaken)="innerAction($event)"
+      >
+        <gdf-info-ext>
+          <div class="gdf-main-base">
+            <div class="gdf-csnippet">
+      <pre class="prettyprint">
+    <code code-display>
+      &lt;app-info-bar
+        infoImg="path/to/image"
+        infoTitle="title"
+        infoDesc="description"
+      >
+        <gdf-info-ext>
+          (transclude)
+        </gdf-info-ext>
+      &lt;/app-info-bar>
+    </code>
+      </pre>
+            </div>
+          </div>
+        </gdf-info-ext>
+      </app-info-bar>
+
+      <app-info-bar
+        infoImg="https://devfest.mn/a/2016/images/devfestmn.caf3a594.svg"
+        infoTitle="Basic Info"
+        infoDesc="This also handles basic information"
+        (onActionTaken)="innerAction($event)"
+      >
+        <gdf-info-ext>
+          <p>I am basic text and could also be anything.</p>
+        </gdf-info-ext>
+      </app-info-bar>
+    </div>
+    <div class="flex__i--xs-3">
+      <app-card
+        dataTitle="CSS Grid"
+        dataDesc="Guide to CSS Grid"
+        cardImg="https://i.ytimg.com/vi/v5KzBPUEgGQ/maxresdefault.jpg"
+        cardText="CSS Grid adds a new layout module and with climbing browser support lets get our learn on."
+      ></app-card>
+    </div>
+  </div>
+</div>

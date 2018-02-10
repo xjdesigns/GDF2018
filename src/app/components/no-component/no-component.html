@@ -8,11 +8,44 @@
       </div>
       <div class="flex__i--xs-2">
         <div class="info-action">
-          <app-menu
-            menuIcon="filter_list"
-            [menuList]="filterList"
-            (menuOptionClicked)="filterAction($event)"
-          ></app-menu>
+          <div
+            class="spx-flyout spx-flyout--right"
+            [class.is-open]="menuIsOpen">
+            <button
+              class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+              [attr.data-icon]="menuIcon"
+              (click)="toggleMenu()"
+            ></button>
+            <div class="spx-flyout__menu">
+              <ul>
+                <li
+                [attr.aria-label]="l"
+                (click)="menuOptionClick(l)"
+                >{{l.name}}
+                </li>
+                <li
+                [attr.aria-label]="l"
+                (click)="menuOptionClick(l)"
+                >{{l.name}}
+                </li>
+                <li
+                [attr.aria-label]="l"
+                (click)="menuOptionClick(l)"
+                >{{l.name}}
+                </li>
+                <li
+                [attr.aria-label]="l"
+                (click)="menuOptionClick(l)"
+                >{{l.name}}
+                </li>
+                <li
+                [attr.aria-label]="l"
+                (click)="menuOptionClick(l)"
+                >{{l.name}}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -45,16 +78,59 @@
     <div class="gdf-info-bar__actions">
       <div class="gdf-info-actions">
         <button
-          *ngFor="let action of infoActions"
           class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
           [attr.data-icon]="action.icon"
           (click)="actionClick(action.item)"
         ></button>
-        <app-menu
-          menuIcon="more_vert"
-          [menuList]="optionsMenuList"
-          (menuOptionClicked)="optionClicked($event)"
-        ></app-menu>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <div
+          class="spx-flyout spx-flyout--right"
+          [class.is-open]="menuIsOpen">
+          <button
+            class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+            [attr.data-icon]="menuIcon"
+            (click)="toggleMenu()"
+          ></button>
+          <div class="spx-flyout__menu">
+            <ul>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -182,16 +258,59 @@
     <div class="gdf-info-bar__actions">
       <div class="gdf-info-actions">
         <button
-          *ngFor="let action of infoActions"
           class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
           [attr.data-icon]="action.icon"
           (click)="actionClick(action.item)"
         ></button>
-        <app-menu
-          menuIcon="more_vert"
-          [menuList]="optionsMenuList"
-          (menuOptionClicked)="optionClicked($event)"
-        ></app-menu>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <div
+          class="spx-flyout spx-flyout--right"
+          [class.is-open]="menuIsOpen">
+          <button
+            class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+            [attr.data-icon]="menuIcon"
+            (click)="toggleMenu()"
+          ></button>
+          <div class="spx-flyout__menu">
+            <ul>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              >{{l.name}}
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -243,16 +362,45 @@
     <div class="gdf-info-bar__actions">
       <div class="gdf-info-actions">
         <button
-          *ngFor="let action of infoActions"
           class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
           [attr.data-icon]="action.icon"
           (click)="actionClick(action.item)"
         ></button>
-        <app-menu
-          menuIcon="more_vert"
-          [menuList]="optionsMenuList"
-          (menuOptionClicked)="optionClicked($event)"
-        ></app-menu>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <button
+          class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+          [attr.data-icon]="action.icon"
+          (click)="actionClick(action.item)"
+        ></button>
+        <div
+          class="spx-flyout spx-flyout--right"
+          [class.is-open]="menuIsOpen">
+          <button
+            class="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+            [attr.data-icon]="menuIcon"
+            (click)="toggleMenu()"
+          ></button>
+          <div class="spx-flyout__menu">
+            <ul>
+              <li
+              [attr.aria-label]="l"
+              (click)="menuOptionClick(l)"
+              *ngFor="let l of menuList"
+              >{{l.name}}
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 

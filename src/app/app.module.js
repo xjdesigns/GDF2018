@@ -15,6 +15,8 @@ var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 var welcome_component_1 = require("./welcome/welcome.component");
+var welcome_02_component_1 = require("./welcome-02/welcome-02.component");
+var docs_component_1 = require("./docs/docs.component");
 var steps_component_1 = require("./steps/steps.component");
 var components_1 = require("./components");
 // DIRECTIVES
@@ -36,6 +38,8 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             home_component_1.HomeComponent,
             welcome_component_1.WelcomeComponent,
+            welcome_02_component_1.Welcome02Component,
+            docs_component_1.DocsComponent,
             steps_component_1.StepsComponent,
             code_display_directive_1.CodeDisplayDirective
         ].concat(components_1.GDFComponentProvider),
